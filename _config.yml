@@ -1,0 +1,15 @@
+title: Skyreach
+description: "Skyreach is an official Vi Channel Partner and Enterprise Digital Transformation provider. Delivering corporate telecom connectivity, hardware deployment, secure networking, Salesflow CRM, and custom ERP whitelisting across India."
+url: "https://www.skyreachteleservices.in"
+baseurl: ""
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md

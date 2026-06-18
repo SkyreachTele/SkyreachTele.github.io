@@ -1,557 +1,87 @@
 ---
-layout: null
+layout: default
+title: Home
+description: Enterprise B2B SaaS and Infrastructure Provider in India.
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skyreach | Enterprise Systems & Managed Connectivity India</title>
-    <meta name="description" content="Skyreach provisions enterprise tech layers across India: Official Vi Connectivity Partner, secure network hardware routing, Salesflow CRM automation, and whitelisted ERP systems.">
-    <link rel="canonical" href="https://www.skyreachteleservices.in/" />
+<style>
+    /* Clean Light Mode Hero */
+    .hero { padding: 120px 0 80px; text-align: center; }
+    .hero h1 { font-size: 52px; font-weight: 800; max-width: 900px; margin: 0 auto 24px; color: var(--text-dark); letter-spacing: -1px; line-height: 1.1; }
+    .hero p { font-size: 19px; color: var(--text-muted); max-width: 700px; margin: 0 auto 40px; }
     
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.skyreachteleservices.in/">
-    <meta property="og:title" content="Skyreach | Enterprise Systems & Managed Connectivity">
-    <meta property="og:description" content="Official Vi Channel Partner and premium SaaS operator. Scalable enterprise pipelines, security integrations, and nationwide infrastructure mapping.">
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; padding: 60px 0; }
     
-    <style>
-        :root {
-            --dark-core: #090d16;       /* Deep High-End SaaS Dark Space */
-            --dark-surface: #111827;    /* Slate Component Surface */
-            --tech-cyan: #06b6d4;       /* Secure Infrastructure Cyan */
-            --saas-magenta: #ec4899;    /* Automation Software Accent */
-            --text-pure: #f8fafc;       /* Crisp High-Contrast Text */
-            --text-muted: #94a3b8;      /* Clean Technical Descriptions */
-            --glass-border: rgba(255, 255, 255, 0.08);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: var(--text-pure);
-            background-color: var(--dark-core);
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Layout Grid Constraints */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Modern Sticky Header Blueprint */
-        header {
-            background-color: rgba(9, 13, 22, 0.8);
-            border-bottom: 1px solid var(--glass-border);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 72px;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: 800;
-            color: var(--text-pure);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .logo-dot {
-            width: 8px;
-            height: 8px;
-            background: linear-gradient(135deg, var(--tech-cyan), var(--saas-magenta));
-            border-radius: 50%;
-        }
-
-        nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 500;
-            margin-left: 28px;
-            font-size: 14px;
-            transition: color 0.2s ease;
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--text-pure);
-        }
-
-        /* High-Converting SaaS Tech Hero Frame */
-        .hero {
-            padding: 140px 0 100px 0;
-            position: relative;
-            background-image: radial-gradient(circle at 50% 15%, rgba(6, 182, 212, 0.12) 0%, transparent 50%);
-            text-align: center;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--glass-border);
-            padding: 6px 16px;
-            border-radius: 99px;
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--text-pure);
-            margin-bottom: 24px;
-            letter-spacing: 0.5px;
-        }
-
-        .hero-badge span {
-            color: var(--tech-cyan);
-            font-weight: 800;
-        }
-
-        .hero h1 {
-            font-size: 52px;
-            font-weight: 800;
-            line-height: 1.15;
-            max-width: 950px;
-            margin: 0 auto 24px auto;
-            letter-spacing: -1.5px;
-            background: linear-gradient(to right, #ffffff, #cbd5e1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: var(--text-muted);
-            max-width: 720px;
-            margin: 0 auto 40px auto;
-            line-height: 1.6;
-        }
-
-        /* CTA Interactive Elements */
-        .cta-group {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .primary-btn {
-            background: linear-gradient(135deg, var(--tech-cyan) 0%, #0891b2 100%);
-            color: var(--dark-core);
-            text-decoration: none;
-            padding: 14px 32px;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 15px;
-            box-shadow: 0 4px 20px rgba(6, 182, 212, 0.25);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .primary-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 24px rgba(6, 182, 212, 0.4);
-        }
-
-        .secondary-btn {
-            background: rgba(255, 255, 255, 0.02);
-            color: var(--text-pure);
-            border: 1px solid var(--glass-border);
-            text-decoration: none;
-            padding: 14px 32px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 15px;
-            transition: background 0.2s ease, border-color 0.2s ease;
-        }
-
-        .secondary-btn:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Modular Architecture Framework */
-        section {
-            padding: 100px 0;
-            border-top: 1px solid var(--glass-border);
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 650px;
-            margin: 0 auto 64px auto;
-        }
-
-        .section-header h2 {
-            font-size: 36px;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 16px;
-        }
-
-        .section-header p {
-            font-size: 16px;
-            color: var(--text-muted);
-        }
-
-        /* Interactive Dynamic Dashboard Tabs */
-        .tabs-nav {
-            display: flex;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--glass-border);
-            padding: 6px;
-            border-radius: 8px;
-            max-width: 480px;
-            margin: 0 auto 56px auto;
-        }
-
-        .tab-trigger {
-            flex: 1;
-            background: transparent;
-            border: none;
-            color: var(--text-muted);
-            padding: 10px 18px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-        }
-
-        .tab-trigger.active {
-            background: rgba(255, 255, 255, 0.06);
-            color: var(--text-pure);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        /* Functional Clean Layout Grids */
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 24px;
-        }
-
-        .tech-card {
-            background-color: var(--dark-surface);
-            border: 1px solid var(--glass-border);
-            padding: 40px;
-            border-radius: 8px;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .tech-card:hover {
-            border-color: rgba(6, 182, 212, 0.3);
-            transform: translateY(-2px);
-        }
-
-        .tech-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(to right, var(--tech-cyan), transparent);
-            opacity: 0;
-            transition: opacity 0.2s ease;
-        }
-
-        .tech-card:hover::before {
-            opacity: 1;
-        }
-
-        /* Flagship SaaS Software Component Cards */
-        .saas-card {
-            background: linear-gradient(180deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.03) 100%), var(--dark-surface);
-            border: 1px solid var(--glass-border);
-            padding: 48px;
-            border-radius: 12px;
-            margin-bottom: 32px;
-            transition: border-color 0.2s ease;
-        }
-
-        .saas-card:hover {
-            border-color: rgba(236, 72, 153, 0.3);
-        }
-
-        .saas-badge {
-            display: inline-flex;
-            background: rgba(236, 72, 153, 0.1);
-            color: var(--saas-magenta);
-            border: 1px solid rgba(236, 72, 153, 0.2);
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 24px;
-            letter-spacing: 0.5px;
-        }
-
-        .saas-card h3 {
-            font-size: 26px;
-            font-weight: 800;
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
-        }
-
-        .tech-card h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 14px;
-            letter-spacing: -0.3px;
-        }
-
-        p.description {
-            font-size: 15px;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        /* Secure Infrastructure Features Lists */
-        .feature-list {
-            margin-top: 24px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
-            list-style: none;
-        }
-
-        .feature-list li {
-            font-size: 14px;
-            color: #cbd5e1;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .feature-list li::before {
-            content: "→";
-            color: var(--saas-magenta);
-            font-weight: 700;
-        }
-
-        #infrastructure .feature-list li::before {
-            content: "✓";
-            color: var(--tech-cyan);
-        }
-
-        /* Bottom Terminal Conversion Frame */
-        .terminal-panel {
-            background: radial-gradient(circle at top right, rgba(236, 72, 153, 0.05), transparent), var(--dark-surface);
-            border: 1px solid var(--glass-border);
-            border-radius: 12px;
-            padding: 64px;
-            text-align: center;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-
-        .terminal-panel h2 {
-            font-size: 38px;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 16px;
-        }
-
-        .terminal-panel p {
-            color: var(--text-muted);
-            font-size: 17px;
-            max-width: 680px;
-            margin: 0 auto 40px auto;
-        }
-
-        /* Clean Technical Footer Matrix */
-        footer {
-            background-color: #05070b;
-            padding: 48px 0;
-            border-top: 1px solid var(--glass-border);
-            font-size: 13px;
-            color: #64748b;
-        }
-
-        .footer-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 24px;
-        }
-
-        .footer-meta {
-            display: flex;
-            gap: 24px;
-        }
-
-        /* Screen Scaling Overrides */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 36px; }
-            .hero p { font-size: 16px; }
-            .saas-card { padding: 32px; }
-            .terminal-panel { padding: 40px 24px; }
-            .nav-wrapper { flex-direction: column; height: auto; padding: 20px 0; gap: 16px; }
-            nav a { margin: 0 10px; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="container nav-wrapper">
-            <a href="/" class="logo">Skyreach<div class="logo-dot"></div></a>
-            <nav>
-                <a href="#ecosystem" class="active">Solution Ecosystem</a>
-                <a href="#connect">Contact Desk</a>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <div class="hero-badge"><span>OFFICIAL</span> Vi CHANNEL INFRASTRUCTURE PARTNER</div>
-            <h1>B2B SaaS Foundations & Secure Enterprise Infrastructures</h1>
-            <p>Architecting complete digital operations for corporate entities, enterprises, and expanding MSMEs across India. Secure telecom pipelines, asset leasing, and optimized software frameworks.</p>
-            <div class="cta-group">
-                <a href="#connect" class="primary-btn">Request Service Architecture</a>
-                <a href="#ecosystem" class="secondary-btn">View Product Stack</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="ecosystem">
-        <div class="container">
-            <div class="section-header">
-                <h2>The Corporate Engineering Stack</h2>
-                <p>Isolate your structural requirements. Switch views below to inspect either our active physical technical layer or our high-throughput software systems.</p>
-            </div>
-
-            <div class="tabs-nav">
-                <button class="tab-trigger active" onclick="switchEngine(event, 'saas')">SaaS & Automation Platforms</button>
-                <button class="tab-trigger" onclick="switchEngine(event, 'infrastructure')">Managed Infrastructure Layers</button>
-            </div>
-
-            <div id="saas" class="tab-content active">
-                <div class="saas-card">
-                    <span class="saas-badge">Enterprise Pipeline Workspace</span>
-                    <h3>Salesflow CRM Engine</h3>
-                    <p class="description">Eliminate operational dark spots and manual workflow data lag. Salesflow operates as a high-density customer relationship management ecosystem designed explicitly to govern complex corporate sales structures. Track multi-layered pipelines, automate enterprise lead routing algorithms, inspect account tracking health logs, and build predictive executive revenue analytics in one unified cloud frame.</p>
-                    <ul class="feature-list">
-                        <li>Automated Corporate Lead Mining</li>
-                        <li>Dynamic Real-time Pipeline Audits</li>
-                        <li>Predictive Lifecycle Intelligence</li>
-                    </ul>
-                </div>
-
-                <div class="saas-card">
-                    <span class="saas-badge">High-Security Operational Layer</span>
-                    <h3>Corporate ERP Whitelisting Architecture</h3>
-                    <p class="description">Establish precise defensive perimeters around internal resource planning clusters. We execute specialized configurations deploying enterprise resource planning (ERP) solutions locked exclusively behind dedicated hardware configurations and network IP whitelists. Isolate accounting data, production logs, and sensitive inventory ledgers away from public endpoint risks.</p>
-                    <ul class="feature-list">
-                        <li>IP Perimeter Grid Enforcement</li>
-                        <li>Isolated Multi-site Asset Tracking</li>
-                        <li>Zero-Trust Internal Identity Verification</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="infrastructure" class="tab-content">
-                <div class="tech-grid">
-                    <div class="tech-card">
-                        <h3>Vi Connectivity Solutions</h3>
-                        <p class="description">Direct enterprise-grade network provisioning. Delivering dedicated corporate mobility frameworks, high-speed corporate leased lines, and corporate IoT infrastructure nodes configured directly onto Vodafone Idea backbones.</p>
-                    </div>
-
-                    <div class="tech-card">
-                        <h3>Hardware Provisioning & Rent</h3>
-                        <p class="description">Optimize corporate working capital cycles. Complete commercial laptop fleet rentals, isolated temporary server configurations, and customized workspace technology deployment designed for corporate offices and technical training environments.</p>
-                    </div>
-
-                    <div class="tech-card">
-                        <h3>Firewall & Perimeter Defense</h3>
-                        <p class="description">Hardened network routing. Blueprint execution for next-generation firewall mountings, optimized corporate LAN/WAN mapping, localized data traffic switches, and structural cyber threat management layers.</p>
-                    </div>
-
-                    <div class="tech-card">
-                        <h3>Enterprise System Integration</h3>
-                        <p class="description">Consolidate decentralized network topologies. Full architectural assembly of corporate server arrays, structured workplace cable paths, and complete physical component linking mapped to your daily business workflow.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="connect">
-        <div class="container">
-            <div class="terminal-panel">
-                <h2>Initiate Technical Consultation</h2>
-                <p>Deploying centralized architectures across domestic regional offices and nationwide multi-site networks. Route your requirements directly to our engineering desk to generate an operational blueprint.</p>
-                <div class="cta-group">
-                    <a href="https://wa.me/91XXXXXXXXXX?text=Hello%20Skyreach%20Team%2C%20we%20require%20an%20enterprise%20solution%20proposal%20for%20our%20business." class="primary-btn" target="_blank" rel="noopener">Secure Secure Link (WhatsApp)</a>
-                    <a href="mailto:info@skyreachteleservices.in" class="secondary-btn">Request Corporate RFP Via Email</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container footer-wrapper">
-            <div>
-                <p>&copy; 2026 Skyreach. Systems operational across Pan-India footprints.</p>
-            </div>
-            <div class="footer-meta">
-                <p>Operator: Authorized Vodafone Idea Channel Ecosystem Partner</p>
-                <p>Systems Class: Cloud Node Managed Architecture</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function switchEngine(event, engineId) {
-            // Deactivate all targets
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
-            
-            const triggers = document.querySelectorAll('.tab-trigger');
-            triggers.forEach(trigger => trigger.classList.remove('active'));
-            
-            // Activate target blocks
-            document.getElementById(engineId).classList.add('active');
-            event.currentTarget.classList.add('active');
-        }
-    </script>
-
-</body>
-</html>
+    /* Premium White Base Card Styling */
+    .card { 
+        background: var(--bg-surface); 
+        border: 1px solid var(--border-light); 
+        padding: 48px 40px; 
+        border-radius: 12px; 
+        text-decoration: none; 
+        display: block; 
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .card:hover { transform: translateY(-6px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05); }
+    .card h3 { font-size: 24px; color: var(--text-dark); margin-bottom: 12px; font-weight: 700; }
+    .card p { color: var(--text-muted); font-size: 16px; line-height: 1.6; }
+
+    /* Custom Product Badges */
+    .badge {
+        display: inline-block;
+        padding: 6px 14px;
+        border-radius: 99px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        letter-spacing: 0.5px;
+    }
+
+    /* 1. Skyreach CRM - Light Blue Styling */
+    .card-skyreach { border-top: 4px solid var(--sky-blue); }
+    .card-skyreach:hover { border-color: var(--sky-blue); }
+    .card-skyreach .badge { background-color: rgba(14, 165, 233, 0.1); color: var(--sky-blue); }
+    .card-skyreach h3:hover { color: var(--sky-blue); }
+
+    /* 2. ERP Systems - Corporate Teal Styling */
+    .card-erp { border-top: 4px solid var(--erp-teal); }
+    .card-erp:hover { border-color: var(--erp-teal); }
+    .card-erp .badge { background-color: rgba(15, 118, 110, 0.1); color: var(--erp-teal); }
+    .card-erp h3:hover { color: var(--erp-teal); }
+
+    /* 3. Vi Connectivity - Red & Yellow Styling */
+    .card-vi { border-top: 4px solid var(--vi-red); }
+    .card-vi:hover { border-color: var(--vi-yellow); }
+    .card-vi .badge { background: linear-gradient(90deg, var(--vi-red), var(--vi-yellow)); color: #ffffff; }
+    .card-vi h3:hover { color: var(--vi-red); }
+
+</style>
+
+<div class="container hero">
+    <h1>Integrated Enterprise Technology & B2B Software Architecture</h1>
+    <p>Select a dedicated solution matrix below to review structural capabilities, compliance standards, and integration protocols.</p>
+</div>
+
+<div class="container grid">
+    <a href="/salesflow-crm" class="card card-skyreach">
+        <span class="badge">Skyreach Software</span>
+        <h3>Salesflow CRM Engine &rarr;</h3>
+        <p>Advanced B2B sales pipeline tracking, lead automation, and enterprise revenue analytics engineered for scale.</p>
+    </a>
+
+    <a href="/erp-whitelisting" class="card card-erp">
+        <span class="badge">Secure Infrastructure</span>
+        <h3>Corporate ERP Whitelisting &rarr;</h3>
+        <p>High-security internal resource planning platforms isolated behind dedicated IP structures and private routing.</p>
+    </a>
+
+    <a href="/vi-connectivity" class="card card-vi">
+        <span class="badge">Vi Partner Solutions</span>
+        <h3>Vi Enterprise Connectivity &rarr;</h3>
+        <p>Official Vodafone Idea channel partner. Corporate leased lines, IoT routing, and nationwide telecom deployment.</p>
+    </a>
+</div>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Skyreach Enterprise</title>
+    <meta name="description" content="{{ page.description }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    
+    <style>
+        /* Premium Corporate Light Mode Variables */
+        :root {
+            --bg-body: #f8fafc;        /* Soft crisp off-white background */
+            --bg-surface: #ffffff;     /* Pure white for cards and headers */
+            --text-dark: #0f172a;      /* Deep slate for primary text */
+            --text-muted: #475569;     /* Soft slate for descriptions */
+            --border-light: #e2e8f0;   /* Clean separator lines */
+            
+            /* Brand Identity Colors */
+            --vi-red: #e60000;         /* Official Vi Red */
+            --vi-yellow: #ffb600;      /* Official Vi Yellow */
+            --sky-blue: #0ea5e9;       /* Skyreach Software Blue */
+            --erp-teal: #0f766e;       /* Secure ERP Corporate Teal */
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* Premium White Sticky Header */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--border-light);
+            position: sticky; top: 0; z-index: 1000;
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+        
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; height: 72px; }
+        .logo { font-size: 24px; font-weight: 800; color: var(--text-dark); text-decoration: none; display: flex; align-items: center; gap: 6px; letter-spacing: -0.5px; }
+        .logo-dot { width: 8px; height: 8px; background: var(--sky-blue); border-radius: 50%; }
+        
+        nav a { color: var(--text-muted); text-decoration: none; font-weight: 600; margin-left: 32px; font-size: 14px; transition: color 0.2s; }
+        nav a:hover { color: var(--sky-blue); }
+
+        /* Global Footer */
+        footer {
+            background-color: var(--bg-surface); padding: 48px 0; border-top: 1px solid var(--border-light); font-size: 13px; color: var(--text-muted); margin-top: 80px;
+        }
+        .footer-wrapper { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="/" class="logo">Skyreach<div class="logo-dot"></div></a>
+            <nav>
+                <a href="/salesflow-crm">Salesflow CRM</a>
+                <a href="/erp-whitelisting">ERP Whitelisting</a>
+                <a href="/vi-connectivity">Vi Connectivity</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <div class="container footer-wrapper">
+            <div>&copy; 2026 Skyreach. Systems operational across Pan-India footprints.</div>
+            <div>Operator: Authorized Vodafone Idea Channel Ecosystem Partner</div>
+        </div>
+    </footer>
+
+</body>
+</html>
